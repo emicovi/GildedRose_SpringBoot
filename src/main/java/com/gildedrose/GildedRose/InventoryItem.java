@@ -1,8 +1,6 @@
 package com.gildedrose.GildedRose;
 
-import org.springframework.stereotype.Component;
 
-@Component
 public abstract class InventoryItem {
     private final Item item;
 
