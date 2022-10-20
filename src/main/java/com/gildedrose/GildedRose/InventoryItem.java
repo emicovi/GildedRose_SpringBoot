@@ -2,53 +2,50 @@ package com.gildedrose.GildedRose;
 
 
 public abstract class InventoryItem {
-    private final Item item;
 
-    public Item getItem() {
-        return item;
-    }
-
-    protected InventoryItem(Item item) {
-        this.item = item;
-    }
 
     public abstract boolean accept(Item item);
 
-    public void dailyUpdate() {
-        updateQuality();
-        updateExpiration();
-        if (isExpired()) {
-            processExpired();
+    public void dailyUpdate(Item item) {
+        updateQuality(item);
+        updateExpiration(item);
+        if (isExpired(item)) {
+            processExpired(item);
         }
     }
 
-    protected void updateExpiration() {
+    protected void updateExpiration(Item item) {
         item.sellIn--;
     }
 
-    protected void updateQuality() {
-            decreaseQuality();
+    protected void updateQuality(Item item) {
+            decreaseQuality(item);
 
     }
 
-    protected boolean isExpired() {
+    protected boolean isExpired(Item item) {
         return item.sellIn < 0;
     }
 
-    protected void processExpired() {
-        decreaseQuality();
+    protected void processExpired(Item item) {
+        decreaseQuality(item);
     }
 
 
-    protected void increaseQuality() {
+    protected void increaseQuality(Item item) {
         if (item.quality < 50) {
             item.quality++;
         }
     }
 
-    protected void decreaseQuality() {
+    protected void decreaseQuality(Item item) {
         if (item.quality > 0) {
             item.quality--;
         }
+    }
+
+    public String getName(Item item) {
+        return item.name;
+
     }
 }

@@ -4,7 +4,9 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class StandardItem extends InventoryItem {
-    protected StandardItem(Item item) {
-        super(item);
+
+    @Override
+    public boolean accept(Item item) {
+        return true;
     }
 }

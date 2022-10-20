@@ -12,6 +12,7 @@ public class ItemFactory implements GildedItemFactory {
     private List<InventoryItem> itemList;
 
 
+
     @Override
     public InventoryItem getInventoryItem(Item item) {
         for (InventoryItem inventoryItem : itemList) {
@@ -19,4 +20,6 @@ public class ItemFactory implements GildedItemFactory {
                 return inventoryItem;
             }
         }
+        return new StandardItem();
+    }
 }

@@ -7,22 +7,11 @@ import org.springframework.stereotype.Component;
 public class Sulfuras extends InventoryItem {
     public static final String NAME = "Sulfuras, Hand of Ragnaros";
 
-    public Sulfuras(Item item) {
-        super(item);
-    }
+
 
     @Override
-    protected void updateExpiration() {
-        // do nothing
+    public boolean accept(Item item) {
+        return item.name.equals(NAME);
     }
 
-    @Override
-    protected void updateQuality() {
-        // do nothing
-    }
-
-    @Override
-    protected void processExpired() {
-        // do nothing;
-    }
 }

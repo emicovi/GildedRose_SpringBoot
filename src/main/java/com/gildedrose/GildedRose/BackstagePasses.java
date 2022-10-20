@@ -6,25 +6,26 @@ import org.springframework.stereotype.Component;
 public class BackstagePasses extends InventoryItem {
     public static final String NAME = "Backstage passes to a TAFKAL80ETC concert";
 
-    public BackstagePasses(Item item) {
-        super(item);
+    @Override
+    public boolean accept(Item item) {
+        return item.name.equals(NAME);
     }
 
     @Override
-    protected void updateQuality() {
-        increaseQuality();
+    protected void updateQuality(Item item) {
+        increaseQuality(item);
 
-        if (getItem().sellIn < 11) {
-            increaseQuality();
+        if (item.sellIn < 11) {
+            increaseQuality(item);
         }
 
-        if (getItem().sellIn < 6) {
-            increaseQuality();
+        if (item.sellIn < 6) {
+            increaseQuality(item);
         }
     }
 
     @Override
-    protected void processExpired() {
-        getItem().quality = 0;
+    protected void processExpired(Item item) {
+        item.quality = 0;
     }
 }

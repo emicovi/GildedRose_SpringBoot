@@ -6,13 +6,15 @@ import org.springframework.stereotype.Component;
 public class Conjured extends InventoryItem {
 
     public static final String NAME = "Conjured";
-    public Conjured(Item item) {
-        super(item);
+
+    @Override
+    public boolean accept(Item item) {
+        return item.name.equals(NAME);
     }
 
     @Override
-    protected void decreaseQuality() {
-        getItem().quality = Math.max(0, getItem().quality - 2);
+    protected void decreaseQuality(Item item) {
+        item.quality = Math.max(0, item.quality - 2);
 
     }
 }

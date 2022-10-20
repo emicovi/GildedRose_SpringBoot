@@ -11,7 +11,7 @@ class GildedRose {
 
     public void updateInventory(Item[] items) {
         for (Item item : items) {
-            itemFactory.getInventoryItem(item).dailyUpdate();
+            itemFactory.getInventoryItem(item).dailyUpdate(item);
         }
     }
 
