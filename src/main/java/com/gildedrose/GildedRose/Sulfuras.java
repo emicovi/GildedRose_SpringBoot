@@ -10,11 +10,16 @@ public class Sulfuras extends InventoryItem {
 
     @Override
     public void decreaseQuality(Item item) {
-        // do nothing
+        return;
     }
 
     @Override
     public void increaseQuality(Item item) {
+        // do nothing
+    }
+
+    @Override
+    public void updateQuality(Item item) {
         // do nothing
     }
 

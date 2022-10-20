@@ -31,6 +31,16 @@ class GildedRoseApplicationTests {
 
 	}
 
+		@Test
+		void legendary_items_never_decrease_in_quality_or_sellIn() {
+		Item []items = new Item[]{new Item("Sulfuras, Hand of Ragnaros", 0, 80)};
+
+		gildedRose.updateInventory(items);
+
+		assertThat(items[0].sellIn).isEqualTo(0);
+		assertThat(items[0].quality).isEqualTo(80);
+	}
+
 
 	@Test
 	void item_quality_is_never_negative() {
@@ -106,15 +116,7 @@ class GildedRoseApplicationTests {
 		assertThat(items[0].quality).isEqualTo(8);
 	}
 
-	@Test
-		void legendary_items_never_decrease_in_quality() {
-		Item [] items = new Item[] { new Item("Sulfuras, Hand of Ragnaros", 0, 80) };
 
-		gildedRose.updateInventory(items);
-
-		assertThat(items[0].quality).isEqualTo(80);
-
-	}
 
 	@Test
 	void backstage_passes_increase_in_quality_as_sellIn_approaches() {
