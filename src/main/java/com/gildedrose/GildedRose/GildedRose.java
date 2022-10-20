@@ -5,8 +5,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 class GildedRose {
-    @Autowired
     protected Item[] items;
+
+    @Autowired
+    protected GildedItemFactory itemFactory;
+
 
     public GildedRose(Item[] items) {
         this.items = items;
@@ -14,9 +17,8 @@ class GildedRose {
 
     public void updateInventory() {
         for (Item item : items) {
-            ItemFactory.getInventoryItem(item).dailyUpdate();
+            itemFactory.getInventoryItem(item).dailyUpdate();
         }
     }
-
 
 }

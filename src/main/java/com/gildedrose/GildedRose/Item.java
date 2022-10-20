@@ -1,10 +1,10 @@
 package com.gildedrose.GildedRose;
 
+
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
 public class Item {
-
     public String name;
 
     public int sellIn;
