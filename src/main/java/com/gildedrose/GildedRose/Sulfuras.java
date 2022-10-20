@@ -8,6 +8,15 @@ public class Sulfuras extends InventoryItem {
     public static final String NAME = "Sulfuras, Hand of Ragnaros";
 
 
+    @Override
+    public void decreaseQuality(Item item) {
+        // do nothing
+    }
+
+    @Override
+    public void increaseQuality(Item item) {
+        // do nothing
+    }
 
     @Override
     public boolean accept(Item item) {
