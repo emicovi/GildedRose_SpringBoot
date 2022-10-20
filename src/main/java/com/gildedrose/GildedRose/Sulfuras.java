@@ -9,23 +9,24 @@ public class Sulfuras extends InventoryItem {
 
 
     @Override
-    public void decreaseQuality(Item item) {
-        return;
-    }
-
-    @Override
-    public void increaseQuality(Item item) {
-        // do nothing
+    public boolean accept(Item item) {
+        return item.name.equals(NAME);
     }
 
     @Override
     public void updateQuality(Item item) {
         // do nothing
     }
-
     @Override
-    public boolean accept(Item item) {
-        return item.name.equals(NAME);
+    public void increaseQuality(Item item) {
+        // do nothing
     }
-
+    @Override
+    public void updateExpiration(Item item) {
+        // do nothing
+    }
+    @Override
+    public void decreaseQuality(Item item) {
+        // do nothing
+    }
 }

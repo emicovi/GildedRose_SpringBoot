@@ -7,6 +7,6 @@ public class StandardItem extends InventoryItem {
 
     @Override
     public boolean accept(Item item) {
-        return true;
+        return false;
     }
 }
