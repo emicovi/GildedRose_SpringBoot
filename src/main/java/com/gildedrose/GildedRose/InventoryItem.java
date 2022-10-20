@@ -12,7 +12,7 @@ public abstract class InventoryItem {
         this.item = item;
     }
 
-    public abstract boolean Assert(Item item);
+    public abstract boolean accept(Item item);
 
     public void dailyUpdate() {
         updateQuality();

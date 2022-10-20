@@ -15,7 +15,7 @@ public class ItemFactory implements GildedItemFactory {
     @Override
     public InventoryItem getInventoryItem(Item item) {
         for (InventoryItem inventoryItem : itemList) {
-            if (inventoryItem.Assert(item)) {
+            if (inventoryItem.accept(item)) {
                 return inventoryItem;
             }
         }

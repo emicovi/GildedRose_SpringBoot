@@ -11,7 +11,7 @@ public class AgedBrie extends InventoryItem {
     }
 
     @Override
-    public boolean Assert(Item item) {
+    public boolean accept(Item item) {
         return item.name.equals(NAME);
     }
 
