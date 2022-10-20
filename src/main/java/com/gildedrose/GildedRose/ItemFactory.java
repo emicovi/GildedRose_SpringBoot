@@ -9,7 +9,7 @@ import java.util.List;
 public class ItemFactory implements GildedItemFactory {
 
     @Autowired
-    private List<Item> itemList;
+    private List<InventoryItem> itemList;
 
 
     @Override
