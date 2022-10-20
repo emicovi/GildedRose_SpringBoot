@@ -14,17 +14,9 @@ public class ItemFactory implements GildedItemFactory {
 
     @Override
     public InventoryItem getInventoryItem(Item item) {
-            if (item.name.equals(AgedBrie.NAME)) {
-                return new AgedBrie(item);
-            } else if (item.name.equals(BackstagePasses.NAME)) {
-                return new BackstagePasses(item);
-            } else if (item.name.equals(Sulfuras.NAME)) {
-                return new Sulfuras(item);
-            } else if (item.name.equals(Conjured.NAME)) {
-                return new Conjured(item);
-            } else {
-                return new StandardItem(item);
+        for (InventoryItem inventoryItem : itemList) {
+            if (inventoryItem.Assert(item)) {
+                return inventoryItem;
             }
         }
-
 }

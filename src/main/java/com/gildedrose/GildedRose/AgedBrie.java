@@ -11,6 +11,11 @@ public class AgedBrie extends InventoryItem {
     }
 
     @Override
+    public boolean Assert(Item item) {
+        return item.name.equals(NAME);
+    }
+
+    @Override
     protected void updateQuality() {
         increaseQuality();
     }
