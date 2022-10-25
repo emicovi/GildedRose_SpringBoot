@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 class GildedRose {
 
     @Autowired
-    protected ItemFactory itemFactory;
+    protected GildedItemFactory itemFactory;
 
     public void updateInventory(Item[] items) {
         for (Item item : items) {
