@@ -1,4 +1,4 @@
-package com.gildedrose.GildedRose;
+package com.gildedrose.gildedRose;
 
 
 public abstract class InventoryItem {

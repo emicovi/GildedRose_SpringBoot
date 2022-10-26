@@ -1,8 +1,5 @@
-package com.gildedrose.GildedRose;
+package com.gildedrose.gildedRose;
 
-
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 public class Item {
     public String name;

@@ -1,6 +1,5 @@
-package com.gildedrose.GildedRose;
+package com.gildedrose.gildedRose;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
