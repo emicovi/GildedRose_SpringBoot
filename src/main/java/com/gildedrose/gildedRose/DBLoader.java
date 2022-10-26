@@ -9,8 +9,6 @@ public class DBLoader {
     @Autowired
     private ItemRepository itemRepository;
 
-
-
     public void loadItems() {
         itemRepository.save(new Item("Aged Brie", 2, 0));
         itemRepository.save(new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20));
