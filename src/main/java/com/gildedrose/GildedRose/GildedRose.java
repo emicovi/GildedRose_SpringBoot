@@ -1,5 +1,6 @@
 package com.gildedrose.GildedRose;
 
+import org.aspectj.lang.annotation.Before;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +9,7 @@ class GildedRose {
 
     @Autowired
     protected GildedItemFactory itemFactory;
+
 
     public void updateInventory(Item[] items) {
         for (Item item : items) {
