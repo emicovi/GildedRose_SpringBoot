@@ -1,11 +1,21 @@
 package com.gildedrose.gildedRose;
 
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "item")
 public class Item {
+
+    @Id
     public String name;
 
+    @Column(name = "sell_in")
     public int sellIn;
-
+    @Column(name = "quality")
     public int quality;
 
     public String getName() {
