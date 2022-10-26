@@ -1,6 +1,8 @@
 package com.gildedrose.gildedRose;
 
 
+import org.springframework.stereotype.Service;
+
 public abstract class InventoryItem {
 
 

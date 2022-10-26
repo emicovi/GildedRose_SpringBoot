@@ -3,7 +3,6 @@ package com.gildedrose.gildedRose;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
