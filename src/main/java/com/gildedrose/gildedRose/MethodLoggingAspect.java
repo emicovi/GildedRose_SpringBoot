@@ -24,7 +24,11 @@ public class MethodLoggingAspect {
         public void logAfterReturning(final JoinPoint joinPoint, final Object result) {
             logger.info("Method {} has returned with value = {}", joinPoint.getSignature().getName(), result);
         }
-        
+
+        @Before("execution(* com.gildedrose.gildedRose.UpdateItems.updateItems(..))")
+        public void logAdvice2(final JoinPoint joinPoint) {
+            logger.info("Method {} is called", joinPoint.getSignature().getName());
+        }
 
 
 
